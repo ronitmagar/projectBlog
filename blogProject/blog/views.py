@@ -9,10 +9,10 @@ from blog.models import Post
 
 def home(request):
     posts = Post.objects.all()[:10]
-    data = {
+    context = {
         'posts' : posts
     }
-    return render(request, 'home.html', data)
+    return render(request, 'home.html', context)
 
 def post(request, url):
     # posts = Post.objects.get(url = url)

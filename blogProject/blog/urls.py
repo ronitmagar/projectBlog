@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^blog/(?P<url>[-\w]+)/$', views.post),
      
 
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+] 
+# + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
