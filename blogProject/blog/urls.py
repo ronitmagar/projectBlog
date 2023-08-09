@@ -21,7 +21,8 @@ from django.conf import settings
 from blog import views
 
 urlpatterns = [
-    url(r'home', views.home),
+    # url('^', views.about),
+    url(r'^home', views.home),
     url(r'^blog/(?P<url>[-\w]+)/$', views.post),
 
 ] 

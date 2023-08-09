@@ -1,27 +1,70 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet"  href="{% static 'css/postcss/style.css' %}">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>{{post.title}}</title>
+  <link rel="stylesheet" href="{% static 'css/postcss/style.css' %}">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{post.title}}</title>
 </head>
+
 <body>
+  <div class="wrapper">
     <div class="blog-post">
-        <h1 class="blog-title">{{post.title}}</h1>
-        <img src="/media/{{post.image}}" alt="Blog Image" class="blog-image">
-        <div class="blog-meta">
-          <span class="blog-date">August 4, 2023</span>
-          <span class="blog-author">Ron Magar</span>
-        </div>
-        <div class="blog-content">
-          <p>{{post.content | safe}}</p>
-        </div>
+      <h1 class="blog-title">{{post.title}}</h1>
+      <img src="/media/{{post.image}}" alt="Blog Image" class="blog-image">
+      <div class="blog-meta">
+        <span class="blog-date">August 4, 2023</span>
+        <span class="blog-author">Ron Magar</span>
       </div>
-      
+      <div class="blog-content">
+        <article>{{post.content | safe}}</article>
+      </div>
+    </div>
+    <aside class="aside">hello world
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quibusdam nihil id, iusto veritatis maxime minus
+        distinctio aliquam dicta! Provident excepturi maiores nulla fugiat vero, suscipit ipsum doloremque quasi
+        pariatur ullam debitis omnis quam aperiam quo, nihil deserunt ab facilis sapiente, accusantium voluptatum modi
+        non earum. Inventore commodi neque rem deleniti excepturi nulla adipisci repudiandae quasi cum, doloribus
+        impedit fuga unde itaque reiciendis saepe, non perferendis dolorum quod eveniet ut aut enim provident dicta
+        officiis! Consectetur nesciunt minima similique fugit quos rerum voluptatem atque aliquid harum, optio
+        exercitationem nobis, quod necessitatibus quaerat quis inventore, quam expedita vitae dicta eum in hic nisi
+        facere. Fugit culpa iusto excepturi aperiam vel adipisci obcaecati esse unde voluptates eligendi nobis in
+        recusandae quidem, sed, quod soluta, inventore placeat voluptate? Voluptates hic non dolore tempore ab,
+        assumenda ipsum quaerat aspernatur labore, tempora sit dolorum voluptatum distinctio cum illo illum at. Nam
+        tempora velit hic optio ut odio deserunt voluptatibus! Quas iste aperiam excepturi distinctio consectetur
+        accusamus alias! Incidunt, voluptatibus itaque fuga quis laboriosam maxime non ullam in ex nihil rem ducimus
+        eveniet a repellat. Aliquam incidunt ipsam magnam, harum reprehenderit repudiandae commodi, doloremque eum id
+        temporibus ea, suscipit aliquid rem. Esse, fugit necessitatibus. Ea autem obcaecati veniam maiores animi velit
+        necessitatibus eveniet, tempore magnam tenetur dicta accusantium libero distinctio quia? Necessitatibus,
+        consequuntur ipsa odit assumenda totam corporis aut asperiores vero fugit dolorum amet nam facere aliquid
+        quisquam animi consectetur minima unde laudantium id accusamus? Nemo, atque tenetur? Quaerat voluptates
+        eligendi, animi tempore quasi eum harum vel aperiam aliquid amet veritatis aliquam, minus quis distinctio sequi,
+        dolorum minima. Voluptatem minus in iste. Quas laborum nulla, explicabo rem consequuntur voluptatibus quisquam
+        sequi quis error nemo voluptas, recusandae doloremque aperiam, corrupti voluptates dolorem impedit similique
+        laboriosam ipsam repellendus enim eaque consectetur minima facere. Delectus quisquam inventore tempore
+        perspiciatis! At atque explicabo incidunt sit eligendi neque perspiciatis placeat sequi? Iusto, voluptatem nihil
+        veniam excepturi, deserunt voluptas sint delectus aspernatur molestiae culpa ipsam quasi reprehenderit!
+        Reprehenderit explicabo aperiam tempore necessitatibus hic harum, totam autem, quia, voluptatibus fugiat
+        mollitia beatae incidunt! Asperiores, vitae debitis vero expedita hic officia placeat quae nisi impedit ducimus
+        nemo soluta, aperiam quia? Laboriosam porro repellendus facilis! Ducimus repellat, consequatur repudiandae
+        corporis voluptatem quasi in perferendis necessitatibus tempore eligendi sed ullam neque non eius eum distinctio
+        blanditiis, quis impedit molestiae, magnam obcaecati maiores nisi! Doloremque velit voluptatum voluptates
+        cupiditate tenetur ut culpa nulla consectetur quibusdam commodi officia mollitia necessitatibus laborum
+        blanditiis aliquam corrupti, et adipisci nam facere hic aspernatur delectus illum. Numquam nulla rem, eveniet
+        amet, eos rerum distinctio officia laboriosam nostrum aperiam nemo praesentium consequatur minus neque quisquam,
+        nam nisi hic. Ab aliquid laboriosam repellendus ipsam, veritatis vitae quas eaque voluptatem quod nam? Maxime,
+        aliquam inventore! Animi fuga vitae repellat hic quos odio dignissimos a et distinctio beatae delectus,
+        explicabo harum amet modi earum placeat porro natus suscipit illo. Consequuntur, incidunt voluptas. Molestias
+        necessitatibus aliquam, recusandae voluptate reiciendis, aut laborum numquam possimus consequatur eveniet
+        praesentium at perferendis quidem aperiam illum corporis impedit cum unde quos. At.</p>
+    </aside>
+  </div>
+
 
 </body>
+
 </html>

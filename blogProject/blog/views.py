@@ -20,3 +20,6 @@ def post(request, url):
         'post' : post
     }
     return render(request, 'post.html', data)
+
+def about(request):
+    return render(request, 'about.html')
