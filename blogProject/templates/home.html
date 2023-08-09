@@ -8,62 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet"  href="{% static 'css/style.css' %}">
-
+    
 </head>
 <body>
 
-    hello world
-
-    {% for post in posts %}
-    <a href="/blog/{{post.url}}">{{ post.title }}</a>
-    {% endfor %}
-
-
-    <!DOCTYPE html>
-<html>
-<head>
-  <title>Slider Example</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link to Bootstrap CSS file -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      {% for p in posts%}
-      <div class="carousel-item active">
-        <img src="/media/{{p.image}}" class = 'responsive-img' alt="Slide 1">
+    <div class="slider">
+      <div class="slider-container">
+        <div class="slider-item">
+          {% for post in posts %}
+          <a href="/blog/{{post.url}}" class="blog-link">
+            <img src="/media/{{post.image}}" alt="Blog 1">
+            <h3 class="blog-title">{{post.title}}</h3>
+          </a>
+          {% endfor %}
+        </div>
       </div>
-      {% endfor %}
     </div>
 
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  </div>
-
-  <!-- Link to Bootstrap JS file -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-          integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-          crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-
-
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

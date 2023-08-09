@@ -15,8 +15,8 @@ def home(request):
     return render(request, 'home.html', context)
 
 def post(request, url):
-    # posts = Post.objects.get(url = url)
+    post = Post.objects.get(url = url)
     data = {
-        'url' : url
+        'post' : post
     }
     return render(request, 'post.html', data)

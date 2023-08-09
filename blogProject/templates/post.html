@@ -1,14 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet"  href="{% static 'css/postcss/style.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <title>{{post.title}}</title>
 </head>
 <body>
-    this is post page
-    {{url}}
+    <div class="blog-post">
+        <h1 class="blog-title">{{post.title}}</h1>
+        <img src="/media/{{post.image}}" alt="Blog Image" class="blog-image">
+        <div class="blog-meta">
+          <span class="blog-date">August 4, 2023</span>
+          <span class="blog-author">Ron Magar</span>
+        </div>
+        <div class="blog-content">
+          <p>{{post.content | safe}}</p>
+        </div>
+      </div>
+      
 
 </body>
 </html>
