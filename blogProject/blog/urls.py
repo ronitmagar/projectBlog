@@ -21,9 +21,10 @@ from django.conf import settings
 from blog import views
 
 urlpatterns = [
-    # url('^', views.about),
-    url(r'^home', views.home),
+    
     url(r'^blog/(?P<url>[-\w]+)/$', views.post),
+    url(r'^$', views.home),
+    # url(r'', views.about),
 
 ] 
 # + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
