@@ -15,8 +15,12 @@ def home(request):
     return render(request, 'home.html', context)
 
 def post(request, url):
+    posts = Post.objects.all()
+    urls = [(post.url,post.title) for post in posts]
     post = Post.objects.get(url = url)
+    allpost = Post.objects.get
     data = {
+        'urls' : urls,
         'post' : post
     }
     return render(request, 'post.html', data)

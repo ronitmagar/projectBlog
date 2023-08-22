@@ -7,7 +7,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>{{post.title}}</title>
 </head>
 
@@ -15,59 +17,63 @@
   <div class="wrapper">
     <div class="blog-post">
       <h1 class="blog-title">{{post.title}}</h1>
-      <img src="/media/{{post.image}}" alt="Blog Image" class="blog-image">
+      <figure class="fig">
+        <img loading="eager" src="/media/{{post.image}}" alt="Blog Image" class="blog-image">
+        <figcaption>Lunar rover</figcaption>
+      </figure>
       <div class="blog-meta">
-        <span class="blog-date">August 4, 2023</span>
-        <span class="blog-author">Written by Ron Magar</span>
+        <img class="blog-avatar" src="/media/{{post.author.image}}" />
+        <span class="blog-author">Written by {{post.author.name}} |</span>
+        <span class="blog-date"> {{post.date}}</span>
       </div>
       <hr class="line">
       <div class="blog-content">
         <article>{{post.content | safe}}</article>
       </div>
     </div>
-    <aside class="aside">hello world
-      <!-- <a href="#" class="cta">button</a> -->
+    <aside class="aside">
 
+      <h3>Sugested Posts</h3>
+      <ul>
+        {% for url in urls %}
+        <a href="/blog/{{post.url}}">
+          <li>{{url.1}}</li>
+        </a>
+        {% endfor %}
+      </ul>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quibusdam nihil id, iusto veritatis maxime minus
-        distinctio aliquam dicta! Provident excepturi maiores nulla fugiat vero, suscipit ipsum doloremque quasi
-        pariatur ullam debitis omnis quam aperiam quo, nihil deserunt ab facilis sapiente, accusantium voluptatum modi
-        non earum. Inventore commodi neque rem deleniti excepturi nulla adipisci repudiandae quasi cum, doloribus
-        impedit fuga unde itaque reiciendis saepe, non perferendis dolorum quod eveniet ut aut enim provident dicta
-        officiis! Consectetur nesciunt minima similique fugit quos rerum voluptatem atque aliquid harum, optio
-        exercitationem nobis, quod necessitatibus quaerat quis inventore, quam expedita vitae dicta eum in hic nisi
-        facere. Fugit culpa iusto excepturi aperiam vel adipisci obcaecati esse unde voluptates eligendi nobis in
-        recusandae quidem, sed, quod soluta, inventore placeat voluptate? Voluptates hic non dolore tempore ab,
-        assumenda ipsum quaerat aspernatur labore, tempora sit dolorum voluptatum distinctio cum illo illum at. Nam
-        tempora velit hic optio ut odio deserunt voluptatibus! Quas iste aperiam excepturi distinctio consectetur
-        accusamus alias! Incidunt, voluptatibus itaque fuga quis laboriosam maxime non ullam in ex nihil rem ducimus
-        eveniet a repellat. Aliquam incidunt ipsam magnam, harum reprehenderit repudiandae commodi, doloremque eum id
-        temporibus ea, suscipit aliquid rem. Esse, fugit necessitatibus. Ea autem obcaecati veniam maiores animi velit
-        necessitatibus eveniet, tempore magnam tenetur dicta accusantium libero distinctio quia? Necessitatibus,
-        consequuntur ipsa odit assumenda totam corporis aut asperiores vero fugit dolorum amet nam facere aliquid
-        quisquam animi consectetur minima unde laudantium id accusamus? Nemo, atque tenetur? Quaerat voluptates
-        eligendi, animi tempore quasi eum harum vel aperiam aliquid amet veritatis aliquam, minus quis distinctio sequi,
-        dolorum minima. Voluptatem minus in iste. Quas laborum nulla, explicabo rem consequuntur voluptatibus quisquam
-        sequi quis error nemo voluptas, recusandae doloremque aperiam, corrupti voluptates dolorem impedit similique
-        laboriosam ipsam repellendus enim eaque consectetur minima facere. Delectus quisquam inventore tempore
-        perspiciatis! At atque explicabo incidunt sit eligendi neque perspiciatis placeat sequi? Iusto, voluptatem nihil
-        veniam excepturi, deserunt voluptas sint delectus aspernatur molestiae culpa ipsam quasi reprehenderit!
-        Reprehenderit explicabo aperiam tempore necessitatibus hic harum, totam autem, quia, voluptatibus fugiat
-        mollitia beatae incidunt! Asperiores, vitae debitis vero expedita hic officia placeat quae nisi impedit ducimus
-        nemo soluta, aperiam quia? Laboriosam porro repellendus facilis! Ducimus repellat, consequatur repudiandae
-        corporis voluptatem quasi in perferendis necessitatibus tempore eligendi sed ullam neque non eius eum distinctio
-        blanditiis, quis impedit molestiae, magnam obcaecati maiores nisi! Doloremque velit voluptatum voluptates
-        cupiditate tenetur ut culpa nulla consectetur quibusdam commodi officia mollitia necessitatibus laborum
-        blanditiis aliquam corrupti, et adipisci nam facere hic aspernatur delectus illum. Numquam nulla rem, eveniet
-        amet, eos rerum distinctio officia laboriosam nostrum aperiam nemo praesentium consequatur minus neque quisquam,
-        nam nisi hic. Ab aliquid laboriosam repellendus ipsam, veritatis vitae quas eaque voluptatem quod nam? Maxime,
-        aliquam inventore! Animi fuga vitae repellat hic quos odio dignissimos a et distinctio beatae delectus,
-        explicabo harum amet modi earum placeat porro natus suscipit illo. Consequuntur, incidunt voluptas. Molestias
-        necessitatibus aliquam, recusandae voluptate reiciendis, aut laborum numquam possimus consequatur eveniet
-        praesentium at perferendis quidem aperiam illum corporis impedit cum unde quos. At.</p>
     </aside>
   </div>
 
+  <footer class="footer-style">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lacus euismod, elementum sapien vel,
+            fringilla velit.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Contact Us</h3>
+          <ul class="social-media">
+            <li><i class="fa fa-map-marker"></i> 123 Main St, Anytown USA</li>
+            <li><i class="fa fa-phone"></i> (123) 456-7890</li>
+            <li><i class="fa fa-envelope"></i> info@example.com</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Follow Us</h3>
+          <ul class="social-media">
+            <li><a href="#"><i class="fab fa-github"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'css/postcss/script.js' %}"></script>
 
 </body>
 
